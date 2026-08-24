@@ -6,10 +6,10 @@ export default function Hero() {
           BCA Student · Software Developer
         </p>
 
-        <h1 className="max-w-5xl text-5xl font-bold leading-[0.9] tracking-tighter sm:text-6xl lg:text-7xl xl:text-8xl">
-          I build practical software
+        <h1 className="max-w-5xl text-5xl font-bold leading-[0.9] tracking-tighter sm:text-6xl lg:text-5xl xl:text-5xl">
+          I try to build practical software
           <br />
-          and keep learning.
+          and keep on learning from mistakes.
         </h1>
 
         <p className="mt-8 max-w-2xl text-base leading-relaxed text-black/60 dark:text-white/60 sm:text-lg md:text-xl">

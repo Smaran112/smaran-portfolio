@@ -125,10 +125,13 @@ export default function Navbar() {
 
           {/* Resume */}
           <a
-            href="#"
+            href="/SmaranCV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            
             className="rounded-full bg-black px-5 py-2.5 text-white transition-transform hover:scale-105 dark:bg-white dark:text-black"
           >
-            Resume ↗
+            CV ↗
           </a>
 
        

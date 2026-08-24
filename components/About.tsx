@@ -39,14 +39,14 @@ export default function About() {
             </p>
 
             <p className="mt-2 font-medium">
-              Bachelor in Computer Applications
+              Bachelor of Computer Applications
             </p>
 
             <p className="text-black/60 dark:text-white/60">
-              Tribhuvan University
+              Ratna Rajyalaxmi Multiple Campus, Tribhuvan University
             </p>
              <p className="mt-2 font-medium">
-              +2
+              +2/Higher Secondary Education
             </p>
 
             <p className="text-black/60 dark:text-white/60">
