@@ -14,14 +14,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Smaran Maharjan — Software Developer",
+  title: "Smaran Maharjan",
   description:
     "Portfolio of Smaran Maharjan, a BCA student at Tribhuvan University building web applications and exploring software development.",
 };
 
-// Runs before React hydrates. Reads the saved/preferred theme and applies
-// the "dark" class to <html> immediately, so there's no flash of the wrong
-// theme while JS is still loading.
 const themeInitScript = `
 (function () {
   try {

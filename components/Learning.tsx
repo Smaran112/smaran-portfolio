@@ -35,7 +35,6 @@ export default function Learning() {
       id="learning"
       className="mx-auto max-w-6xl px-6 py-10"
     >
-      {/* Section heading */}
       <div className="mb-16">
         <p className="text-sm font-medium uppercase tracking-[0.2em] text-[var(--color-muted)]">
           Currently Learning
@@ -52,20 +51,17 @@ export default function Learning() {
         </p>
       </div>
 
-      {/* Learning items */}
       <div>
         {learningItems.map((item) => (
           <article
             key={item.number}
             className="grid gap-4 border-t border-[var(--color-border)] py-10 md:grid-cols-[120px_1fr]"
           >
-            {/* Number */}
             <p className="text-sm font-medium text-[var(--color-muted)]">
               {item.number}
             </p>
 
             <div>
-              {/* Title + Status */}
               <div className="flex flex-wrap items-center gap-3">
                 <h3 className="text-2xl font-semibold tracking-tight text-[var(--color-ink)] md:text-3xl">
                   {item.title}
@@ -76,7 +72,6 @@ export default function Learning() {
                 </span>
               </div>
 
-              {/* Description */}
               <p className="mt-3 max-w-2xl leading-relaxed text-[var(--color-muted)]">
                 {item.description}
               </p>

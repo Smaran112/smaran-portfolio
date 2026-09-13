@@ -3,17 +3,15 @@ export default function Contact() {
   return (
     <section id="contact" className="mx-auto max-w-6xl px-6 py-20">
       <div className="border-t border-[var(--color-border)] pt-16">
-        {/* Section Label */}
+
         <p className="text-sm font-medium uppercase tracking-[0.2em] text-[var(--color-muted)]">
           Contact
         </p>
 
-        {/* Heading */}
         <h2 className="mt-6 max-w-4xl text-5xl font-bold tracking-tight text-[var(--color-ink)] md:text-7xl">
           Let&apos;s build something.
         </h2>
 
-        {/* Description */}
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--color-muted)]">
           Have a project, opportunity, or just want to say hello? I&apos;d be
           happy to hear from you.
@@ -22,7 +20,6 @@ export default function Contact() {
         {/* Contact Links */}
         <div className="mt-12 flex flex-col gap-8">
 
-          {/* Email */}
           <a
             href="mailto:mrsmaran123@gmail.com"
             className="group w-fit"
@@ -50,8 +47,7 @@ export default function Contact() {
             </p>
           </a>
 
-          {/* WhatsApp */}
-          <a
+]          <a
             href="https://wa.me/9779762421690"
             target="_blank"
             rel="noopener noreferrer"
@@ -80,7 +76,6 @@ export default function Contact() {
             </p>
           </a>
 
-          {/* GitHub */}
           <a
             href="https://github.com/Smaran112"
             target="_blank"
@@ -105,7 +100,6 @@ export default function Contact() {
             </p>
           </a>
 
-          {/* LinkedIn */}
           <a
             href="https://www.linkedin.com/in/smaran-maharjan-213b92424/"
             target="_blank"

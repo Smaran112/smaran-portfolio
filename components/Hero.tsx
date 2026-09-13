@@ -4,19 +4,16 @@ export default function Hero() {
     <section className="mx-auto flex min-h-[calc(100vh-80px)] max-w-6xl items-start px-6 pt-12 pb-20">
       <div className="w-full">
        
-        {/* Main heading */}
         <h1 className="max-w-5xl text-5xl font-bold leading-none tracking-tighter text-[var(--color-ink)] sm:text-6xl lg:text-6xl">
          Hi, I'm Smaran Maharjan, 
          <br></br>
          A software developer focused on building useful, practical things.
         </h1>
 
-        {/* Short description */}
         <p className="mt-8 max-w-xl text-base leading-normal text-[var(--color-muted)] sm:text-lg md:text-xl">
           Software development · Web development · Problem solving
         </p>
 
-        {/* Actions */}
         <div className="mt-10 flex flex-wrap gap-4">
           <a
             href="#work"
@@ -27,7 +24,6 @@ export default function Hero() {
 
         </div>
 
-        {/* Quick details */}
         <div className="mt-11 flex flex-wrap gap-x-12 gap-y-6 text-sm text-[var(--color-muted)]">
           <p>
             <span className="font-medium text-[var(--color-ink)]">

@@ -10,9 +10,6 @@ const emptySubscribe = () => () => {};
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
 
-  // True once the client has taken over from the server-rendered HTML.
-  // This avoids a hydration mismatch on the sun/moon icon without using
-  // useEffect + setState.
   const mounted = useSyncExternalStore(
     emptySubscribe,
     () => true,
@@ -30,8 +27,7 @@ export default function Navbar() {
             href="/"
             scroll
             onClick={(e) => {
-              // If we're already on the homepage, use the logo as a
-              // smooth-scroll-to-top action.
+            
               if (window.location.pathname === "/") {
                 e.preventDefault();
 
@@ -106,51 +102,41 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden items-center gap-7 text-sm font-medium text-[var(--color-ink)] md:flex">
-          <a href="#work" className="transition-opacity hover:opacity-50">
-            Work
-          </a>
+    {/* Navigation */}
 
-          <a
-            href="#learning"
-            className="transition-opacity hover:opacity-50"
-          >
-            Learning
-          </a>
-
-          <a href="#skills" className="transition-opacity hover:opacity-50">
-            Skills
-          </a>
-
-          <a href="#about" className="transition-opacity hover:opacity-50">
-            About
-          </a>
-
-          <a href="#contact" className="transition-opacity hover:opacity-50">
-            Contact
-          </a>
-
-          {/* CV */}
-          <a
-            href="/SmaranCV.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full bg-[var(--color-border)] px-6 py-3 text-sm font-medium text-[var(--color-ink)] transition-all hover:-translate-y-0.5 hover:bg-[var(--color-accent)] hover:text-[var(--color-bg)] dark:hover:bg-[var(--color-accent)] dark:text-[var(--color-ink)]"
-          >
-            CV 
-          </a>
-        </div>
-
-        {/* Mobile CV */}
-        <a
-          href="/SmaranCV.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="rounded-full bg-[var(--color-border)] px-4 py-2 text-sm font-medium text-[var(--color-ink)] transition-opacity hover:opacity-80 md:hidden dark:bg-[var(--color-accent)]"
-        >
-          CV 
+       <div className="flex items-center gap-3 text-xs font-medium text-[var(--color-ink)] sm:gap-5 sm:text-sm">
+        <a href="#work" className="transition-opacity hover:opacity-50">
+        Work
         </a>
+
+        <a
+        href="#learning"
+        className="transition-opacity hover:opacity-50"
+        >
+        Learning
+        </a>
+
+        <a href="#skills" className="transition-opacity hover:opacity-50">
+        Skills
+        </a>
+
+        <a href="#about" className="transition-opacity hover:opacity-50">
+        About
+        </a>
+
+        <a href="#contact" className="transition-opacity hover:opacity-50">
+        Contact
+        </a>
+
+  <a
+    href="/SmaranCV.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="rounded-full bg-[var(--color-border)] px-3 py-2 text-xs font-medium text-[var(--color-ink)] transition-all hover:-translate-y-0.5 hover:bg-[var(--color-accent)] hover:text-[var(--color-bg)] sm:px-5 sm:py-2.5 sm:text-sm"
+  >
+    CV
+  </a>
+</div>
       </nav>
     </header>
   );

@@ -23,7 +23,6 @@ export default function Skills() {
       id="skills"
       className="mx-auto max-w-6xl px-6 py-20"
     >
-      {/* Section heading */}
       <div className="mb-16">
         <p className="text-sm font-medium uppercase tracking-[0.2em] text-[var(--color-muted)]">
           Skills
