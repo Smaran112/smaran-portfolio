@@ -3,16 +3,28 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-bg: #F8F7FC;
+  --color-ink: #18161F;
+  --color-muted: #716B7D;
+  --color-border: #E8E4EF;
+  --color-accent: #552ef1;
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --color-bg:  #0D0B14;
+  --color-ink: #b9c2ce;
+  --color-muted: #6e7680;
+  --color-border: #1e2229;
+  --color-accent: #1f3460;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-ink);
+  }
 }

@@ -19,6 +19,24 @@ export const metadata: Metadata = {
     "Portfolio of Smaran Maharjan, a BCA student at Tribhuvan University building web applications and exploring software development.",
 };
 
+// Runs before React hydrates. Reads the saved/preferred theme and applies
+// the "dark" class to <html> immediately, so there's no flash of the wrong
+// theme while JS is still loading.
+const themeInitScript = `
+(function () {
+  try {
+    var stored = localStorage.getItem("theme");
+    var isDark =
+      stored === "dark" ||
+      (stored !== "light" &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches);
+    if (isDark) {
+      document.documentElement.classList.add("dark");
+    }
+  } catch (e) {}
+})();
+`;
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
@@ -26,7 +44,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-white text-black dark:bg-[#0a0a0a] dark:text-white">
+      <body className="min-h-full flex flex-col">
+        <script
+           
+          dangerouslySetInnerHTML={{ __html: themeInitScript }}
+        />
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

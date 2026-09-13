@@ -4,11 +4,11 @@ const skillGroups = [
     skills: ["HTML", "CSS", "JavaScript", "React", "Next.js"],
   },
   {
-    title: "Backend",
-    skills: ["PHP", "MySQL", "Laravel"],
+    title: "Backend & Database",
+    skills: ["PHP", "Laravel", "MySQL"],
   },
   {
-    title: "Languages",
+    title: "Programming",
     skills: ["C", "C#", "Java", "Python"],
   },
   {
@@ -19,30 +19,43 @@ const skillGroups = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="mx-auto max-w-6xl px-6 py-24">
+    <section
+      id="skills"
+      className="mx-auto max-w-6xl px-6 py-20"
+    >
+      {/* Section heading */}
       <div className="mb-16">
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-black/40 dark:text-white/40">
-          03 / Skills
+        <p className="text-sm font-medium uppercase tracking-[0.2em] text-[var(--color-muted)]">
+          Skills
         </p>
 
-        <h2 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight md:text-6xl">
+        <h2 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight text-[var(--color-ink)] md:text-6xl">
           Technologies I work with.
         </h2>
+
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--color-muted)]">
+          Technologies I&apos;ve worked with through coursework, personal
+          projects, and hands-on learning.
+        </p>
       </div>
 
-      <div className="grid border-t border-black/15 dark:border-white/15 md:grid-cols-2">
+      {/* Skill groups */}
+      <div className="grid border-t border-[var(--color-border)] md:grid-cols-2">
         {skillGroups.map((group) => (
           <div
             key={group.title}
-            className="border-b border-black/15 py-8 dark:border-white/15 md:px-6 md:first:border-r md:dark:border-white/15"
+            className="border-b border-[var(--color-border)] py-8 md:px-6 md:first:border-r"
           >
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-black/50 dark:text-white/50">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-[var(--color-muted)]">
               {group.title}
             </h3>
 
             <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2">
               {group.skills.map((skill) => (
-                <span key={skill} className="text-lg font-medium">
+                <span
+                  key={skill}
+                  className="text-lg font-medium text-[var(--color-ink)]"
+                >
                   {skill}
                 </span>
               ))}
