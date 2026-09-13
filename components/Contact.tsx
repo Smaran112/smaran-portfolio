@@ -47,7 +47,7 @@ export default function Contact() {
             </p>
           </a>
 
-]          <a
+         <a
             href="https://wa.me/9779762421690"
             target="_blank"
             rel="noopener noreferrer"
